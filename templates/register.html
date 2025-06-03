@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4 shadow-sm">
+                <h1 class="mb-4">Register</h1>
+                
+                <form method="POST" enctype="multipart/form-data" class="position-relative" style="padding-bottom: 70px;">
+                    <div class="mb-3">
+                        <label for="profile_picture" class="form-label">Profile Picture:</label>
+                        <input type="file" id="profile_picture" name="profile_picture" accept="image/*" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name:</label>
+                        <input type="text" id="name" name="name" required class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="birthday" class="form-label">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" required class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address:</label>
+                        <textarea id="address" name="address" required class="form-control"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username:</label>
+                        <input type="text" id="username" name="username" required class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" id="password" name="password" required class="form-control">
+                    </div>
+
+                    <!-- Register button in bottom-right corner -->
+                    <div class="position-absolute bottom-0 end-0">
+                        <button type="submit" class="btn btn-primary m-3">Register</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
